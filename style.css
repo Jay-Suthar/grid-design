@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(252, 207, 222)
+}
+.box{
+    display: grid;
+    /* grid-gap: 4px; */
+    grid-template-areas: 
+    'navbar navbar navbar navbar' 
+    'aside1 section section aside2'
+    'footer footer footer footer';
+    /* background-color: rgb(252, 207, 222); */
+}
+
+.item{
+    /* background-color: rgb(155, 115, 115); */
+    /* border: 2px solid black; */
+    padding: 12px 12px;
+}
+
+#navbar{
+    grid-area: navbar;
+    background-color: rgb(255, 17, 0);
+    /* height: 70%; */
+    position: sticky;
+    top: 0px;
+    cursor: pointer;
+}
+.list li a:hover{
+    color: rgb(6, 8, 15);
+}
+.list{
+    display: flex;
+    list-style: none;
+    margin: 5px 0px;
+}
+
+.list a{
+    text-decoration: none;
+    padding: 0px 15px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+#h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-family:fantasy;
+}
+#aside1{
+    grid-area: aside1;
+    /* height: 100%; */
+    text-align: center;
+    display: grid;
+    grid-template-rows: 50px 280px auto;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.thumbnail img{
+    width: 230px;
+    /* border: 2px solid black; */
+    border-radius: 26px;
+    margin: 20px 65px;
+}
+#aside2{
+    grid-area: aside2;
+    /* height: 100%; */
+    text-align: center;
+    display: grid;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 50px 280px auto;
+    justify-content: center;
+}
+
+#para{
+    border: 2px solid rgb(224, 38, 38);
+    border-radius: 15px;
+    max-width:400px;
+    padding: 14px;
+    text-align: center;
+    font-family: cursive;
+}
+
+#para2{
+    border: 2px solid rgb(224, 38, 38);
+    /* max-width:400px; */
+    padding: 14px;
+    text-align: center;
+    font-family: cursive;
+    border-radius: 15px;
+}
+
+#section{
+    /* background-color: wheat; */
+    grid-area: section;
+    /* height: 100%; */
+    text-align: center;
+}
+
+.parasec{
+    margin-top: 20px;
+    font-family: cursive;
+}
+
+#footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: rgb(255, 17, 0);
+}
+@media only screen and (max-width:300px) {
+    body {
+        /* background-color: red; */
+    }
+    .box{
+        grid-template-areas: 
+        'navbar navbar navbar navbar' 
+        'aside1 aside1 aside1 aside1'
+        'section section section section'
+        'aside2 aside2 aside2 aside2'
+        'footer footer footer footer';
+    }
+    .list{
+        flex-direction: column;
+        align-items: center;
+    }
+    li{
+        margin: 3px 0px;
+    }
+    .list a{
+        padding: 0px 0px;
+        /* margin: 13px 0px; */
+    }
+    #para{
+        border: 2px solid rgb(224, 38, 38);
+        border-radius: 15px;
+        max-width:100%;
+        padding: 14px;
+        text-align: center;
+        font-family: cursive;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width:700px) {
+    body {
+        /* background-color: blue; */
+    }
+    .box{
+        grid-template-areas: 
+        'navbar navbar navbar navbar' 
+        'aside1 aside1 aside1 aside1'
+        'section section section section'
+        'aside2 aside2 aside2 aside2'
+        'footer footer footer footer';
+    }
+    .list{
+        flex-direction: column;
+        align-items: center;
+    }
+    li{
+        margin: 3px 0px;
+    }
+    .list a{
+        padding: 0px 0px;
+        /* margin: 13px 0px; */
+    }
+    #para{
+        border: 2px solid rgb(224, 38, 38);
+        border-radius: 15px;
+        max-width:100%;
+        padding: 14px;
+        text-align: center;
+        font-family: cursive;
+    }
+}
+@media (min-width: 700px) and (max-width:1200px) {
+    body {
+        /* background-color: yellow; */
+    }
+    .box{
+        grid-template-areas: 
+        'navbar navbar navbar navbar' 
+        'aside1 aside1 aside1 aside1'
+        'section section section section'
+        'aside2 aside2 aside2 aside2'
+        'footer footer footer footer';
+    }
+/* 
+    .list{
+        flex-direction: column;
+        align-items: center;
+    } */
+    #para{
+        border: 2px solid rgb(224, 38, 38);
+        border-radius: 15px;
+        max-width:100%;
+        padding: 14px;
+        text-align: center;
+        font-family: cursive;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    body {
+        /* background-color: green; */
+    }
+}
